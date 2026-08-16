@@ -15,7 +15,7 @@
 
 ### 到 Releases 下載最新版
 
-- [BB Close Process Lasso GUI.exe](https://github.com/BBeef/bb-close-process-lasso-gui/releases)
+- [BB Close Process Lasso GUI.exe](https://github.com/BeefBB/bb-close-process-lasso-gui/releases)
 
 然後放到一個你不會移動的地方, 再執行它
 
