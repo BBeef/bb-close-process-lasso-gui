@@ -24,7 +24,7 @@ else:
     TR = f'"{ROOT_DIR}\\.venv\\Scripts\\python.exe" "{FILE}" --task'
 
 
-TASK_NAME = "BBCloseProcessLasso"
+TASK_NAME = "BBCloseProcessLassoGUI"
 
 
 def run_as_admin() -> None:
@@ -206,6 +206,10 @@ if __name__ == "__main__":
         kill_process_lasso_gui()
 
     elif n == "2":
+        delete_task()
+
+        time.sleep(1)
+
         create_task()
 
     elif n == "3":
