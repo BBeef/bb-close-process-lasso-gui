@@ -178,7 +178,11 @@ if __name__ == "__main__":
         while not check_desktop_ready():
             time.sleep(1)
 
-        time.sleep(5)
+        time.sleep(3)
+
+        kill_process_lasso_gui()
+
+        time.sleep(1)
 
         kill_process_lasso_gui()
 
