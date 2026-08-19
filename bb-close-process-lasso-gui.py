@@ -46,6 +46,13 @@ def run_as_admin() -> None:
         sys.exit()
 
 
+def hide_console() -> None:
+    hwnd = ctypes.windll.kernel32.GetConsoleWindow()
+
+    if hwnd:
+        ctypes.windll.user32.ShowWindow(hwnd, 0)
+
+
 def check_desktop_ready() -> bool:
     """
     檢查是否登入且載入桌面
@@ -175,20 +182,17 @@ if __name__ == "__main__":
 
     if "--task" in sys.argv:
 
+        hide_console()
+
+
         while not check_desktop_ready():
             time.sleep(1)
 
-        time.sleep(3)
 
-        kill_process_lasso_gui()
-
-        time.sleep(1)
-
-        kill_process_lasso_gui()
-
-        time.sleep(1)
-
-        kill_process_lasso_gui()
+        for i in range(5):
+            time.sleep(1)
+            kill_process_lasso_gui()
+            
 
         sys.exit(0)
 
