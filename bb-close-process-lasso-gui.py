@@ -192,7 +192,7 @@ if __name__ == "__main__":
         for i in range(5):
             time.sleep(1)
             kill_process_lasso_gui()
-            
+
 
         sys.exit(0)
 
